@@ -9,13 +9,13 @@ module.exports = {
   checkStatus: function() {
   	  fetch(`${adminUrl}/check_status`)
 		  .then(function(response) {
-		    if (response.status == 200)
+		    if (response.status === 200)
 		    {
-		      document.getElementById('status').css('background-color', 'green')
-		      document.getElementById('status').text('Collecting Packets')
+		      document.getElementById('status').style.backgroundColor = 'green'
+		      document.getElementById('status').textContent = 'Collecting Packets'
 		    } else {
-		      document.getElementById('status').css('background-color', 'red')
-		      document.getElementById('status').text('Not Collecting')
+		      document.getElementById('status').style.backgroundColor = 'red'
+		      document.getElementById('status').textContent = 'Not Collecting'
 		    }
 		  })
   		},
@@ -23,7 +23,7 @@ module.exports = {
   	   return fetch(`${adminUrl}/available_devices`)
 			  .then(response => response.json())
 			  .then(data => {
-			    return data.body
+        document.getElementById('available-devices-data').textContent = data.body
 			})
   	},
 	setCaptureDevice: function(captureDevice) {

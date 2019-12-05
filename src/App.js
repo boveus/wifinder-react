@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import ConfigTab from './components/configuration-tab/config-tab'
 import './App.css';
 
@@ -10,7 +9,7 @@ function App() {
         Welcome to Wifinder
       </header>
       <ConfigTab />
-    </div> 
+    </div>
   )
 }
 
