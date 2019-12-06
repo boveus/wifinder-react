@@ -3,8 +3,9 @@ import { startCapture, checkStatus } from '../../api/v1/administration'
 
 class CaptureBox extends Component {
     componentDidMount() {
-      setInterval(() => { checkStatus() }, 6000);
+      setInterval(() => { checkStatus() }, 60000);
     }
+
  render () {
     return (
 		<div id='capture-box'>
