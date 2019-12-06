@@ -2,11 +2,46 @@ body {
   font-family: 'Courier New';
 }
 
-#tabs li {
-  display: inline;
+.header {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 15px;
 }
-#tabs li button {
-  padding: 8px 6px;
+
+#tabs-panel {
+  display: flex;
+}
+
+#tabs-panel > .tab {
+  display: flex;
+}
+
+#main {
+  margin-left: 30px
+}
+
+.tab {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid;
+  border-color: black;
+}
+
+.tab:first-of-type {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tab:last-of-type {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tab.active, .tab:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
 }
 
 #capture-box {
@@ -14,12 +49,9 @@ body {
   margin-bottom: 40px;
 }
 
-.tab-view {
-  margin-right: 15%;
-  margin-left: 15%;
-}
-
 #status {
+  margin-top: 2px;
+  margin-left: 2px;
   border-radius: 10px;
   padding-top: 4px;
   min-height: 40px;
@@ -28,7 +60,6 @@ body {
   background-color: yellow;
   font-weight: 800;
 }
-
 
 #available-devices-data {
     white-space: pre-wrap;
@@ -66,4 +97,3 @@ button {
 button:hover {
   cursor: pointer;
 }
-

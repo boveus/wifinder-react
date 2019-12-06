@@ -1,14 +1,16 @@
 import React from 'react';
-import ConfigTab from './components/configuration-tab/config-tab'
+import Tabs from './components/main/tabs.js'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="header">
         Welcome to Wifinder
       </header>
-      <ConfigTab />
+      <div id='main'>
+        <Tabs />
+      </div>
     </div>
   )
 }
