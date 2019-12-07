@@ -16,6 +16,10 @@ body {
   display: flex;
 }
 
+#devices, #ssids {
+  display: none;
+}
+
 #main {
   margin-left: 30px
 }
