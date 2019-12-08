@@ -5,7 +5,7 @@ class AvailableDevices extends Component {
   getDeviceInfo() {
     let element = document.getElementById('available-devices-data')
     if(typeof element !== 'undefined' && element !== null) {
-      availableDevices()
+      return availableDevices()
     }
   }
  render () {

@@ -9,31 +9,11 @@ class CaptureBox extends Component {
  render () {
     return (
 		<div id='capture-box'>
-		 <button id='check-status' onClick = { checkStatus() }>Refresh Status</button>
-		 <button id='start-capture' onClick= { startCapture() }>Start Capturing</button>
+		 <button id='check-status' onClick = { () => checkStatus() }>Refresh Status</button>
+		 <button id='start-capture' onClick= { () => startCapture() }>Start Capturing</button>
 		 <div id='status'>Unknown</div>
 		</div>
         )
       }
     }
 export default CaptureBox;
-
-
-
-
-
-
- //    } )
-	// $("#start-capture").on("click", function(event) {
-	//   admin.startCapture()
-	// })
-
-	// $("#check-status").on("click", function(event) {
-	//   admin.checkStatus()
-	// })
-
-	// $("#set-capture").on("click", function(event) {
-	//   admin.setCaptureDevice($('#capture-device').val()).then(response => {
-	//   	alert(response)
-	//   })
-	// })

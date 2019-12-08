@@ -4,10 +4,10 @@ let devicesIndexUrl = `${config.apiBaseUrl}/devices`
 
 module.exports = {
   count: function() {
-	return fetch(devicesIndexUrl)
+	return fetch(`${devicesIndexUrl}/count`)
 	  .then(response => response.json())
 	  .then(data => {
-	    return data.length
+      document.getElementById('devices-count').textContent = data
 	})
 	.catch(error => console.log(error));
   },

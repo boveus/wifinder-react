@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { setCaptureDevice } from '../../api/v1/administration'
+import { setCaptureDevice, setCaptureDeviceToMonitor } from '../../api/v1/administration'
 
 class SetCaptureDevice extends Component {
   sendCaptureDevice () {
@@ -8,13 +8,24 @@ class SetCaptureDevice extends Component {
       setCaptureDevice(element.value)
     }
   }
+
+  sendCaptureDeviceToMonitor () {
+    let element = document.getElementById('set-capture-device-to-monitor')
+    if(typeof element !== 'undefined' && element !== null) {
+      setCaptureDeviceToMonitor()
+    }
+  }
+
+
+
  render () {
     return (
     	<div>
 		  <div id='capture-device-container'>
 		    <p> Capture Device: <input id='capture-device' type="text"></input></p>
-		    <button id='set-capture' onClick={this.sendCaptureDevice()}> Set capture device </button>
-		  </div>
+		    <button id='set-capture' onClick={ () => this.sendCaptureDevice() }> Set capture device </button>
+        <button id='set-capture-device-to-monitor' onClick = { () => this.sendCaptureDeviceToMonitor() }> Set Capture Device to Monitor </button>
+      </div>
 		</div>
         )
       }

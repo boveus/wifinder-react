@@ -32,5 +32,8 @@ module.exports = {
 		  .then(data => {
 		    return data.message
 		})
-  	}
+  },
+  setCaptureDeviceToMonitor: function() {
+    fetch(`${adminUrl}/set_capture_device_to_monitor`)
+      .catch(error => console.log(error))},
   }
