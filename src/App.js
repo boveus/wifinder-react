@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <header className="header">
         Welcome to Wifinder
+      <img id="logo" src="./logo.png" alt="Filler" width="25" height="25"/>
       </header>
       <div id='main'>
         <Tabs />
