@@ -4,10 +4,10 @@ let ssidsIndexUrl = `${config.apiBaseUrl}/ssids`
 
 module.exports = {
   count: function() {
-	return fetch(ssidsIndexUrl)
+	return fetch(`${ssidsIndexUrl}/count`)
 	  .then(response => response.json())
 	  .then(data => {
-      document.getElementById('ssids-count').textContent = data.length
+      document.getElementById('ssids-count').textContent = data
 	})
 	.catch(error => console.log(error));
   },
