@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ConfigTab from '../configuration-tab/config-tab'
 import DevicesTab from '../devices-tab/devices-tab'
+import SSIDsTab from '../ssids-tab/ssids-tab'
 
 class Tabs extends Component {
   showActiveTab(tab) {
@@ -41,6 +42,7 @@ class Tabs extends Component {
            <DevicesTab />
          </div>
          <div id='ssids'>
+           <SSIDsTab />
          </div>
       </React.Fragment>
         )
