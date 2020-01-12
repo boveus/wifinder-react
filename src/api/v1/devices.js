@@ -11,8 +11,9 @@ module.exports = {
 	})
 	.catch(error => console.log(error));
   },
-  all: function() {
-	return fetch(devicesIndexUrl)
+  all: function(devicePage) {
+  let page = devicePage || 0
+	return fetch(`${devicesIndexUrl}?page=${page}`)
 	  .then(response => response.json())
 	  .then(data => {
 	    return data
